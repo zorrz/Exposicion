@@ -19,18 +19,19 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="5" Margin="4,0,-4,0" Grid.RowSpan="2">
-            <!-- GroupBox Metodo de pago -->
+            <!-- GroupBox El bien a comprar -->
             <GroupBox Header="¿Qué bien desea comprar?" Margin="0,0,0,10" Width="159">
                 <StackPanel>
                     <CheckBox Content="Carro" Name="CheckBoxCarro" Checked="CheckBox_Checked" Background="White"/>
                     <CheckBox Content="Casa" Name="CheckBoxCasa" Checked="CheckBox_Checked"/>
                 </StackPanel>
             </GroupBox>
+            <!-- GroupBox Metodo de pago -->
             <GroupBox Header="¿Cómo realizara el pago?" Width="150">
                 <StackPanel Margin="0,0,48,0">
-                    <RadioButton Content="Efectivo" GroupName="ManeraPago" x:Name="RadioButtonEfectivo" Checked="RadioButton_Checked" Width="96"/>
-                    <RadioButton Content="Tarjeta" GroupName="ManeraPago" x:Name="RadioButtonTarjeta" Checked="RadioButton_Checked" Width="97"/>
-                    <RadioButton Content="Transferencia" GroupName="ManeraPago" x:Name="RadioButtonTransferencia" Checked="RadioButton_Checked" Width="91" Height="16"/>
+                    <RadioButton Content="Efectivo" GroupName="ManeraPago" x:Name="RadioButtonEfectivo"  Width="96"/>
+                    <RadioButton Content="Tarjeta" GroupName="ManeraPago" x:Name="RadioButtonTarjeta"  Width="97"/>
+                    <RadioButton Content="Transferencia" GroupName="ManeraPago" x:Name="RadioButtonTransferencia"  Width="91" Height="16"/>
                 </StackPanel>
             </GroupBox>
         </StackPanel>

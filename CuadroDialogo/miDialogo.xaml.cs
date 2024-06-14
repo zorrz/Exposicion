@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace CuadroDialogo
 {
-    /// <summary>
-    /// Lógica de interacción para miDialogo.xaml
-    /// </summary>
+   
     public partial class miDialogo : Window
     {
         public miDialogo()

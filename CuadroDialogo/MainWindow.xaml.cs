@@ -29,8 +29,8 @@ namespace CuadroDialogo
         private void AbrirDialogo_Click(object sender, RoutedEventArgs e)
         {
                 miDialogo dialog = new miDialogo();
-                bool? result = dialog.ShowDialog();
-                if (result == true)
+                bool? resultado = dialog.ShowDialog();
+                if (resultado == true)
                 {
                     MessageBox.Show("El dialogo fue aceptado");
                 }

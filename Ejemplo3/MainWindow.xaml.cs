@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace Ejemplo3
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         bool Verificar = false;
@@ -76,16 +74,7 @@ namespace Ejemplo3
             RadioButton19.IsChecked = false;
             RadioButton20.IsChecked = false;
         }
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-            if (radioButton != null)
-            {
-                string Edad = radioButton.Content.ToString();
-
-            }
-        }
-
+        
         private void Button_Cancelar_Click_1(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

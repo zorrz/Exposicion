@@ -18,6 +18,7 @@ namespace GroupBox
 {
     public partial class MainWindow : Window
     {
+        bool Verificar = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -25,7 +26,9 @@ namespace GroupBox
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if ((sender as CheckBox).IsChecked == true)
+            
+            Verificar = (sender as CheckBox).IsChecked.Value;
+            if (Verificar)
             {
                 if ((sender as CheckBox).Content.ToString() == "Carro")
                 {
@@ -44,27 +47,58 @@ namespace GroupBox
             if (CheckBoxCarro.IsChecked == true)
             {
                 Bien = "Carro";
+               
             }
             else if (CheckBoxCasa.IsChecked == true)
             {
                 Bien = "Casa";
+                
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un bien.");
+                Limpiar();
+                return;
             }
 
             string TipoPago = "";
             if (RadioButtonEfectivo.IsChecked == true)
             {
                 TipoPago = "Efectivo";
+                
             }
             else if (RadioButtonTarjeta.IsChecked == true)
             {
-                TipoPago = "Trajeta";
+                TipoPago = "Tarjeta";
+                
             }
             else if (RadioButtonTransferencia.IsChecked == true)
             {
                 TipoPago = "Transferencia";
+              
+            }
+            else
+            {
+                MessageBox.Show("Seleccione tipo de pago.");
+                Limpiar();
+                return;
             }
 
-            MessageBox.Show($"Se va comprar el siguiente bien: {Bien}\nSe va pagar con: {TipoPago}");
+            MessageBox.Show($"Se va comprar un(a): {Bien}\n Se va pagar con: {TipoPago}");
+
+
+            Limpiar();
+
+        }
+
+        private void Limpiar() 
+        {
+            CheckBoxCarro.IsChecked = false;
+            CheckBoxCasa.IsChecked = false;
+
+            RadioButtonEfectivo.IsChecked = false;
+            RadioButtonTarjeta.IsChecked = false;
+            RadioButtonTransferencia.IsChecked = false;
         }
 
         private void BotonLimpiar_Click(object sender, RoutedEventArgs e)
@@ -80,17 +114,6 @@ namespace GroupBox
         private void BotonCancelar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-            if (radioButton != null)
-            {
-                string TipoPago = radioButton.Content.ToString();
-
-                
-            }
         }
     }
 }
