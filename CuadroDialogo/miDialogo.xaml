@@ -1,0 +1,14 @@
+﻿<Window x:Class="CuadroDialogo.miDialogo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuadroDialogo"
+        mc:Ignorable="d"
+        Title="miDialogo" Height="450" Width="800">
+    <Grid Background="#FFF7BDBD">
+        <TextBlock Text="Este es un dialogo" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="20"/>
+        <Button Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="150" Click="OkButton_Click" Height="55" FontFamily="Times New Roman" FontSize="18"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="400,0,0,10" VerticalAlignment="Bottom" Width="150" Height="55" FontFamily="Times New Roman" FontSize="18" Click="Cancelar_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ejemplo3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejemplo3"
+        mc:Ignorable="d"
+        Title="Casillas de Verificacion" Height="440" Width="1000">
+    <Grid x:Name="Proyecto" Background="#FFFFCDCD" Height="425" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="99*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox x:Name="CheckBox_F" Content="Femenino" HorizontalAlignment="Left" Margin="252,129,0,0" VerticalAlignment="Top" Height="50" Width="110" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" IsChecked="False" Checked="CheckBox_Checked"/>
+        <CheckBox x:Name="CheckBox_M" Content="Masculino" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Height="50" Width="110" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" IsChecked="False" Checked="CheckBox_Checked" Grid.Column="1" RenderTransformOrigin="1.2,0.001"/>
+        <Label Content="Bienvenido Al Programa de Casillas de Verificacion" HorizontalAlignment="Left" Margin="288,33,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman" Foreground="#FF8E38C1" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="¿Cual es tu Sexo?" HorizontalAlignment="Left" Margin="390,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman" Foreground="#FF3E3A40" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="RadioButton18" Content="18" HorizontalAlignment="Left" Margin="270,278,0,0" VerticalAlignment="Top"  Height=" 50" Width="110" FontSize="20" FontFamily="Times New Roman" FontWeight="Black"/>
+        <Label Content="¿Que edad Tienes?" HorizontalAlignment="Left" Margin="390,211,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Times New Roman" Foreground="#FF3E3A40" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="RadioButton19" Content="19" HorizontalAlignment="Left" Margin="395,278,0,0" VerticalAlignment="Top" Height=" 50" Width="110" FontSize="20" FontFamily="Times New Roman" FontWeight="Black"/>
+        <RadioButton x:Name="RadioButton20" Content="20" HorizontalAlignment="Left" Margin="30,278,0,0" VerticalAlignment="Top"  Height=" 50" Width="110" FontSize="20" FontFamily="Times New Roman" FontWeight="Black" RenderTransformOrigin="4.818,0.581" Grid.Column="1"/>
+        <Button x:Name="Buttom_Generar" Content="Generar" HorizontalAlignment="Left" Margin="307,373,0,0" VerticalAlignment="Top" OpacityMask="Black" FontFamily="Times New Roman" Height="23" Width="85" FontSize="14" FontWeight="Bold" Click="Buttom_Generar_Click"/>
+        <Button x:Name="Buttom_Limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="427,373,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" Height="23" Width="78" FontSize="16" FontWeight="Bold" Click="Buttom_Limpiar_Click"/>
+        <Button x:Name="Button_Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="30,373,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Times New Roman" Height="23" Width="90" FontSize="14" FontWeight="Bold" Click="Button_Cancelar_Click_1"/>
+
+    </Grid>
+</Window>

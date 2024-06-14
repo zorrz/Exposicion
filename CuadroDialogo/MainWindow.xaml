@@ -1,0 +1,12 @@
+﻿<Window x:Class="CuadroDialogo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuadroDialogo"
+        mc:Ignorable="d"
+        Title="Cuadro de Dialogo" Height="450" Width="800" Background="#FFE49E9E">
+    <Grid>
+        <Button x:Name="buttonAbrirDialogo" Content="Abrir dialogo" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AbrirDialogo_Click" Height="54" Width="140" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold"/>
+    </Grid>
+</Window>

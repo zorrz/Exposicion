@@ -1,0 +1,43 @@
+﻿<Window x:Class="GroupBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupBox"
+        mc:Ignorable="d"
+        Title="GroupBox" Height="260" Width="250">
+    <Grid Background="#FF7585AA" Margin="0,0,0,-16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="5" Margin="4,0,-4,0" Grid.RowSpan="2">
+            <!-- GroupBox Metodo de pago -->
+            <GroupBox Header="¿Qué bien desea comprar?" Margin="0,0,0,10" Width="159">
+                <StackPanel>
+                    <CheckBox Content="Carro" Name="CheckBoxCarro" Checked="CheckBox_Checked" Background="White"/>
+                    <CheckBox Content="Casa" Name="CheckBoxCasa" Checked="CheckBox_Checked"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="¿Cómo realizara el pago?" Width="150">
+                <StackPanel Margin="0,0,48,0">
+                    <RadioButton Content="Efectivo" GroupName="ManeraPago" x:Name="RadioButtonEfectivo" Checked="RadioButton_Checked" Width="96"/>
+                    <RadioButton Content="Tarjeta" GroupName="ManeraPago" x:Name="RadioButtonTarjeta" Checked="RadioButton_Checked" Width="97"/>
+                    <RadioButton Content="Transferencia" GroupName="ManeraPago" x:Name="RadioButtonTransferencia" Checked="RadioButton_Checked" Width="91" Height="16"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="26,142,0,66" Width="206" Grid.ColumnSpan="4" Grid.Row="1">
+            <Button Content="Generar" Click="BotonGenerar_Click" Margin="5" Height="25" Width="56"/>
+            <Button Content="Limpiar" Click="BotonLimpiar_Click" Margin="5" Height="25" Width="56"/>
+            <Button Content="Cancelar" Click="BotonCancelar_Click" Margin="5" Height="25" Width="56" Background="#FFF0F3F3"/>
+        </StackPanel>
+    </Grid>
+</Window>
